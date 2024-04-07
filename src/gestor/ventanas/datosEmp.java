@@ -1,6 +1,24 @@
 package gestor.ventanas;
 
-public class datosEmp
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class datosEmp extends JFrame implements ActionListener
 {
 
+    private JPanel JDatosEmp;
+    private JLabel labelTitulo;
+    private JButton buttonMenu;
+
+    public JPanel getJDatosEmp()
+    {
+        return JDatosEmp;
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e)
+    {
+
+    }
 }

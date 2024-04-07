@@ -1,6 +1,7 @@
 package gestor.ventanas;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -19,7 +20,7 @@ public class datosPer extends JFrame implements ActionListener
 
     public JPanel getJDatosPer()
     {
-        return getJDatosPer();
+        return JDatosPer;
     }
 
     datosPer()
@@ -31,6 +32,28 @@ public class datosPer extends JFrame implements ActionListener
     @Override
     public void actionPerformed(ActionEvent e)
     {
+        if(e.getSource() == buttonMenu)
+        {
 
+            super.dispose();
+        }
+        
     }
+    private void mostrarMenu()
+    {
+        JFrame frame = new JFrame("MENU");
+        Dimension tamaño = Toolkit.getDefaultToolkit().getScreenSize();
+        int x = (tamaño.width / 2) -200;
+        int y = (tamaño.height / 2) -150;
+
+        Menu menu = new Menu();
+
+        frame.setContentPane(menu.getJMenu());
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setSize(700,500);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+    }
+
+
 }
