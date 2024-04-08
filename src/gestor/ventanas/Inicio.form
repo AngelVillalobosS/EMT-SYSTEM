@@ -68,7 +68,7 @@
           <text value="USUARIO:"/>
         </properties>
       </component>
-      <component id="e18c" class="javax.swing.JButton" binding="Cerrar">
+      <component id="e18c" class="javax.swing.JButton" binding="buttonCerrar">
         <constraints>
           <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>

@@ -16,6 +16,8 @@ public class Menu extends JFrame implements ActionListener
 
     Menu()
     {
+
+
         buttonClose.addActionListener(this);
         datosPersonalesButton.addActionListener(this);
         datosEmpresarialesButton.addActionListener(this);
@@ -33,23 +35,21 @@ public class Menu extends JFrame implements ActionListener
         if(e.getSource() == datosPersonalesButton)
         {
             mostarDatosPersonales();
-            dispose();
         }
 
         if(e.getSource() == datosEmpresarialesButton)
         {
             mostarDatosEmpresariales();
-            dispose();
         }
 
         if(e.getSource() == contratosButton)
         {
-
+            mostarContratos();
         }
 
         if(e.getSource() == buttonClose)
         {
-            dispose();
+            this.dispose();
         }
     }
 
@@ -63,7 +63,7 @@ public class Menu extends JFrame implements ActionListener
         datosPer datosPer = new datosPer();
 
         venDatosPer.setContentPane(datosPer.getJDatosPer());
-        venDatosPer.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        venDatosPer.pack();
         venDatosPer.setSize(700,500);
         venDatosPer.setLocationRelativeTo(null);
         venDatosPer.setVisible(true);
@@ -80,10 +80,27 @@ public class Menu extends JFrame implements ActionListener
         datosEmp datosEmp = new datosEmp();
 
         venDatosEmp.setContentPane(datosEmp.getJDatosEmp());
-        venDatosEmp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        venDatosEmp.pack();
         venDatosEmp.setSize(700,500);
         venDatosEmp.setLocationRelativeTo(null);
         venDatosEmp.setVisible(true);
+
+    }
+
+    private void mostarContratos()
+    {
+    JFrame venContratos = new JFrame("Contratos");
+    Dimension tamaño = Toolkit.getDefaultToolkit().getScreenSize();
+    int x = (tamaño.width / 2) -200;
+    int y = (tamaño.height / 2) -150;
+
+    contratos contratos = new contratos();
+
+    venContratos.setContentPane(contratos.getJContratos());
+    venContratos.pack();
+    venContratos.setSize(700,500);
+    venContratos.setLocationRelativeTo(null);
+    venContratos.setVisible(true);
 
     }
 }

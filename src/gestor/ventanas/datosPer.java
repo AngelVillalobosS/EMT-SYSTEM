@@ -14,7 +14,7 @@ public class datosPer extends JFrame implements ActionListener
     private JTextField textField3;
     private JLabel labelName;
     private JLabel labeCorreo;
-    private JButton buttonClose;
+
     private JButton buttonMenu;
     private JList list1;
 
@@ -25,7 +25,7 @@ public class datosPer extends JFrame implements ActionListener
 
     datosPer()
     {
-        buttonClose.addActionListener(this);
+
         buttonMenu.addActionListener(this);
     }
 
@@ -34,7 +34,6 @@ public class datosPer extends JFrame implements ActionListener
     {
         if(e.getSource() == buttonMenu)
         {
-
             super.dispose();
         }
         
