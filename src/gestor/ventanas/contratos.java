@@ -3,6 +3,7 @@ package gestor.ventanas;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.table.*;
 
 public class contratos extends JFrame implements ActionListener
 {
@@ -27,6 +28,8 @@ public class contratos extends JFrame implements ActionListener
     contratos()
     {
         buttonMenu.addActionListener(this);
+        buttonRegistar.addActionListener(this);
+        comboBox1.setModel(new DefaultComboBoxModel<>(Cargos.values()));
     }
 
     @Override
@@ -35,6 +38,14 @@ public class contratos extends JFrame implements ActionListener
         if(e.getSource() == buttonMenu)
         {
             System.exit(0);
+        }
+
+        if (e.getSource() == buttonRegistar)
+        {
+            Cargos cargo = (Cargos) comboBox1.getSelectedItem();
+            String opcionCargo = cargo.toString();
+            JOptionPane.showMessageDialog(this,opcionCargo);
+
         }
     }
 }

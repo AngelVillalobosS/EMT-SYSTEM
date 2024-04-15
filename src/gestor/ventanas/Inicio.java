@@ -16,6 +16,7 @@ public class Inicio extends JFrame implements ActionListener
     private JLabel labelPassword;
     private JButton buttonLogin;
     private JPasswordField password;
+    private JLabel Imagen;
 
     public Inicio() {
         buttonLogin.addActionListener(this);
@@ -39,9 +40,8 @@ public class Inicio extends JFrame implements ActionListener
             } else {
                 JOptionPane.showMessageDialog(null, "USUARIO O CONTRASEÑA INCORRECTOS");
             }
-        } else if (e.getSource() == buttonCerrar)
-        {
-            System.exit(0);
+        } else if (e.getSource() == buttonCerrar) {
+           System.exit(0);
         }
     }
 

@@ -61,11 +61,11 @@ public class Menu extends JFrame implements ActionListener
         datosPer datosPer = new datosPer();
 
         venDatosPer.setContentPane(datosPer.getJDatosPer());
-        venDatosPer.pack();
+        //venDatosPer.pack();
         venDatosPer.setSize(700,500);
         venDatosPer.setLocationRelativeTo(null);
         venDatosPer.setVisible(true);
-
+        dispose();
     }
 
     private void mostarDatosEmpresariales()
@@ -78,7 +78,6 @@ public class Menu extends JFrame implements ActionListener
         datosEmp datosEmp = new datosEmp();
 
         venDatosEmp.setContentPane(datosEmp.getJDatosEmp());
-        venDatosEmp.pack();
         venDatosEmp.setSize(700,500);
         venDatosEmp.setLocationRelativeTo(null);
         venDatosEmp.setVisible(true);
@@ -95,7 +94,7 @@ public class Menu extends JFrame implements ActionListener
     contratos contratos = new contratos();
 
     venContratos.setContentPane(contratos.getJContratos());
-    venContratos.pack();
+   // venContratos.pack();
     venContratos.setSize(700,500);
     venContratos.setLocationRelativeTo(null);
     venContratos.setVisible(true);

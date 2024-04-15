@@ -1,5 +1,4 @@
 import gestor.ventanas.Inicio;
-
 import javax.swing.*;
 import java.awt.*;
 
@@ -16,7 +15,6 @@ public class Prubas
 
         frame.setContentPane(incio.getPanelInicio());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
         frame.setSize(600, 500);
         frame.setLocation(x, y);
         frame.setVisible(true);
