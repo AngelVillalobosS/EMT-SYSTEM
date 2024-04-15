@@ -14,7 +14,6 @@ public class Prubas
         Inicio incio = new Inicio();
 
         frame.setContentPane(incio.getPanelInicio());
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(600, 500);
         frame.setLocation(x, y);
         frame.setVisible(true);

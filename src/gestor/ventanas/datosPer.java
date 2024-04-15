@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.*;
 
 public class datosPer extends JFrame implements ActionListener
 {
@@ -27,6 +28,7 @@ public class datosPer extends JFrame implements ActionListener
     {
         buttonRegistrar.addActionListener(this);
         buttonMenu.addActionListener(this);
+
     }
 
     @Override
@@ -34,26 +36,13 @@ public class datosPer extends JFrame implements ActionListener
     {
         if(e.getSource() == buttonMenu)
         {
-            JOptionPane.showMessageDialog(this,"Saludos");
             dispose();
+        }
+
+        if(e.getSource() == buttonRegistrar)
+        {
+
         }
         
     }
-    private void mostrarMenu()
-    {
-        JFrame frame = new JFrame("MENU");
-        Dimension tamaño = Toolkit.getDefaultToolkit().getScreenSize();
-        int x = (tamaño.width / 2) -200;
-        int y = (tamaño.height / 2) -150;
-
-        Menu menu = new Menu();
-
-        frame.setContentPane(menu.getJMenu());
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.setSize(700,500);
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-    }
-
-
 }

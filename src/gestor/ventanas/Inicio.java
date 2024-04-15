@@ -36,7 +36,6 @@ public class Inicio extends JFrame implements ActionListener
             if (user.equals("admin") && pass.equals("2003")) {
                 JOptionPane.showMessageDialog(null, "BIENVENIDO");
                 mostrarMenu();
-
             } else {
                 JOptionPane.showMessageDialog(null, "USUARIO O CONTRASEÑA INCORRECTOS");
             }
