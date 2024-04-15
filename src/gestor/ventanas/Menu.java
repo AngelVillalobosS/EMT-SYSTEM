@@ -16,8 +16,6 @@ public class Menu extends JFrame implements ActionListener
 
     Menu()
     {
-
-
         buttonClose.addActionListener(this);
         datosPersonalesButton.addActionListener(this);
         datosEmpresarialesButton.addActionListener(this);
@@ -49,7 +47,7 @@ public class Menu extends JFrame implements ActionListener
 
         if(e.getSource() == buttonClose)
         {
-            this.dispose();
+            System.exit(0);
         }
     }
 

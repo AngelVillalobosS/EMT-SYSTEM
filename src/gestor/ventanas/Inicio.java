@@ -39,8 +39,9 @@ public class Inicio extends JFrame implements ActionListener
             } else {
                 JOptionPane.showMessageDialog(null, "USUARIO O CONTRASEÑA INCORRECTOS");
             }
-        } else if (e.getSource() == buttonCerrar) {
-            this.dispose();
+        } else if (e.getSource() == buttonCerrar)
+        {
+            System.exit(0);
         }
     }
 

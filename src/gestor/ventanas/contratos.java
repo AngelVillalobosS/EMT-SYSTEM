@@ -17,14 +17,24 @@ public class contratos extends JFrame implements ActionListener
     private JTextField textField3;
     private JLabel labelCargo;
     private JComboBox comboBox1;
+    private JButton buttonRegistar;
 
     public JPanel getJContratos()
     {
         return JContratos;
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
+    contratos()
+    {
+        buttonMenu.addActionListener(this);
+    }
 
+    @Override
+    public void actionPerformed(ActionEvent e)
+    {
+        if(e.getSource() == buttonMenu)
+        {
+            System.exit(0);
+        }
     }
 }
