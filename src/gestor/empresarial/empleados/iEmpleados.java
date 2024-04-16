@@ -1,7 +1,7 @@
 package gestor.empresarial.empleados;
 
 public interface iEmpleados {
-    public String getInfoEmpleados(int id);
+    public String getInfoEmpleados(String id);
     public String getInfoEmpleado(String empleado);
-    public int getAntiguedad(int id);
+    public String getAntiguedad(String id);
 }

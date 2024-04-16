@@ -2,14 +2,14 @@ import gestor.ventanas.Inicio;
 import javax.swing.*;
 import java.awt.*;
 
-public class Prubas
+public class Pruebas
 {
     public static void main(String[] args)
     {
         JFrame frame = new JFrame("EMT-SYSTEM");
-        Dimension tamaño = Toolkit.getDefaultToolkit().getScreenSize();
-        int x = (tamaño.width / 2) -300;
-        int y = (tamaño.height / 2) -250;
+        Dimension tamannio = Toolkit.getDefaultToolkit().getScreenSize();
+        int x = (tamannio.width / 2) -300;
+        int y = (tamannio.height / 2) -250;
 
         Inicio incio = new Inicio();
 

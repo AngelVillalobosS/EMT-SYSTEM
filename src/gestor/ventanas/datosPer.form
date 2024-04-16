@@ -6,7 +6,7 @@
       <xy x="20" y="20" width="979" height="400"/>
     </constraints>
     <properties>
-      <background color="-16777216"/>
+      <background color="-15065787"/>
     </properties>
     <border type="none"/>
     <children>
@@ -19,13 +19,15 @@
           <text value="ID"/>
         </properties>
       </component>
-      <component id="841b4" class="javax.swing.JTextField" binding="textFieldID">
+      <component id="841b4" class="javax.swing.JTextField" binding="idField">
         <constraints>
           <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value=""/>
+        </properties>
       </component>
       <component id="3ba29" class="javax.swing.JLabel" binding="labelName">
         <constraints>
@@ -36,13 +38,15 @@
           <text value="Nombre"/>
         </properties>
       </component>
-      <component id="c84ae" class="javax.swing.JTextField" binding="textFieldNombre">
+      <component id="c84ae" class="javax.swing.JTextField" binding="nombreField">
         <constraints>
           <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value=""/>
+        </properties>
       </component>
       <component id="bed1b" class="javax.swing.JLabel" binding="labeCorreo">
         <constraints>
@@ -53,7 +57,7 @@
           <text value="Correo Electronico"/>
         </properties>
       </component>
-      <component id="cff13" class="javax.swing.JTextField" binding="textFieldCorreo">
+      <component id="cff13" class="javax.swing.JTextField" binding="emailField">
         <constraints>
           <grid row="1" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -102,7 +106,7 @@
           <text value="Registrar"/>
         </properties>
       </component>
-      <component id="18146" class="javax.swing.JTextField" binding="textFieldApellido">
+      <component id="18146" class="javax.swing.JTextField" binding="apellidoField">
         <constraints>
           <grid row="1" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>

@@ -4,25 +4,24 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import gestor.empresarial.*;
 import gestor.empresarial.empleados.Empleados;
 
 public class datosPer extends JFrame implements ActionListener
 {
     private JPanel JDatosPer;
     private JLabel labelId;
-    private JTextField textFieldID;
-    private JTextField textFieldNombre;
-    private JTextField textFieldCorreo;
+    private JTextField idField;
+    private JTextField nombreField;
+    private JTextField emailField;
     private JLabel labelName;
     private JLabel labeCorreo;
     private JButton buttonRegistrar;
     private JButton buttonMenu;
-    private JTextField textFieldApellido;
+    private JTextField apellidoField;
     private JLabel labelApellido;
     private JList list1;
 
-    private Empleados empleados;
+    private final Empleados empleados;
 
     public JPanel getJDatosPer()
     {
@@ -45,15 +44,12 @@ public class datosPer extends JFrame implements ActionListener
         }
 
         if(e.getSource() == buttonRegistrar) {
-            String id = textFieldID.getText();
-            String nombre = textFieldNombre.getText();
-            String apellido = textFieldApellido.getText();
-            String correo = textFieldCorreo.getText();
+            String id = idField.getText();
+            String nombre = nombreField.getText();
+            String apellido = apellidoField.getText();
+            String correo = emailField.getText();
 
-            empleados.addDatosPersonales(nombre,apellido,correo);
-
-
+            empleados.addDatosPersonales(id, nombre, apellido, correo);
         }
-        
     }
 }

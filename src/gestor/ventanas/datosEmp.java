@@ -9,12 +9,12 @@ public class datosEmp extends JFrame implements ActionListener
 
     private JPanel JDatosEmp;
     private JLabel labelTitulo;
-    private JButton buttonMenu;
+    private JButton botonMenu;
     private JLabel labelNombreEmpresa;
-    private JTextField textField1;
-    private JTextField textField2;
+    private JTextField nombreEmField;
+    private JTextField rfcField;
     private JLabel labelRFC;
-    private JButton buttonRegistrar;
+    private JButton botonRegistrar;
 
     public JPanel getJDatosEmp()
     {
@@ -23,14 +23,14 @@ public class datosEmp extends JFrame implements ActionListener
 
     datosEmp()
     {
-        buttonMenu.addActionListener(this);
-        buttonRegistrar.addActionListener(this);
+        botonMenu.addActionListener(this);
+        botonRegistrar.addActionListener(this);
     }
 
     @Override
     public void actionPerformed(ActionEvent e)
     {
-        if(e.getSource() == buttonMenu)
+        if(e.getSource() == botonMenu)
         {
             System.exit(0);
         }

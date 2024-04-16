@@ -1,7 +1,6 @@
 package gestor.ventanas;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.*;
 
 
@@ -11,10 +10,10 @@ public class Inicio extends JFrame implements ActionListener
     private JPanel panelInicio;
     private JButton buttonCerrar;
     private JLabel LUser;
-    private JTextField textUser;
+    private JTextField usuarioTexto;
     private JLabel labelPassword;
     private JButton buttonLogin;
-    private JPasswordField password;
+    private JPasswordField passwordText;
     private JLabel Imagen;
 
     public Inicio() {
@@ -29,8 +28,8 @@ public class Inicio extends JFrame implements ActionListener
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == buttonLogin) {
-            String user = textUser.getText();
-            String pass = new String(password.getPassword());
+            String user = usuarioTexto.getText();
+            String pass = new String(passwordText.getPassword());
 
             if (user.equals("admin") && pass.equals("2003")) {
                 JOptionPane.showMessageDialog(null, "BIENVENIDO");
