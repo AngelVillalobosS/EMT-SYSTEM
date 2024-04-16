@@ -61,7 +61,8 @@ public class Menu extends JFrame implements ActionListener
         datosPer datosPer = new datosPer();
 
         venDatosPer.setContentPane(datosPer.getJDatosPer());
-        venDatosPer.setSize(700,500);
+        venDatosPer.setSize(900,500);
+
         venDatosPer.setLocationRelativeTo(null);
         venDatosPer.setVisible(true);
     }

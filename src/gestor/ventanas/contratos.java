@@ -1,9 +1,11 @@
 package gestor.ventanas;
 
+import gestor.empresarial.contrato.Contrato;
+import gestor.empresarial.datos.DatosEmpresariales;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.table.*;
 
 public class contratos extends JFrame implements ActionListener
 {
@@ -11,14 +13,16 @@ public class contratos extends JFrame implements ActionListener
     private JPanel JContratos;
     private JLabel LabelContratos;
     private JButton buttonMenu;
-    private JTextField textField1;
+    private JTextField textFieldID;
     private JLabel labelNoContrato;
-    private JTextField textField2;
+    private JTextField textFieldNumero;
     private JLabel labelanno;
-    private JTextField textField3;
+    private JTextField textFieldAnno;
     private JLabel labelCargo;
     private JComboBox comboBox1;
     private JButton buttonRegistar;
+    private Contrato contrato;
+
 
     public JPanel getJContratos()
     {
@@ -30,6 +34,8 @@ public class contratos extends JFrame implements ActionListener
         buttonMenu.addActionListener(this);
         buttonRegistar.addActionListener(this);
         comboBox1.setModel(new DefaultComboBoxModel<>(Cargos.values()));
+        contrato = new Contrato(0);
+
     }
 
     @Override
@@ -44,7 +50,18 @@ public class contratos extends JFrame implements ActionListener
         {
             Cargos cargo = (Cargos) comboBox1.getSelectedItem();
             String opcionCargo = cargo.toString();
-            JOptionPane.showMessageDialog(this,opcionCargo);
+
+            //JOptionPane.showMessageDialog(this,opcionCargo);
+
+            int numeroContraro = textFieldNumero.getColumns();
+            contrato.setNoContrato(numeroContraro);
+
+            int anno = textFieldAnno.getColumns();
+            contrato.setNoContrato(anno);
+
+
+
+
 
         }
     }

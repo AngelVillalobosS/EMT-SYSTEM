@@ -9,6 +9,7 @@ public final class DatosEmpresariales extends DatosPersonales{
 
     }
 
+
     String getAdscripcion() {
         return adscripcion;
     }
