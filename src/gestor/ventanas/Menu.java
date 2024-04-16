@@ -84,16 +84,17 @@ public class Menu extends JFrame implements ActionListener
 
     private void mostarContratos()
     {
-    JFrame venContratos = new JFrame("Contratos");
-    Dimension tamaño = Toolkit.getDefaultToolkit().getScreenSize();
-    int x = (tamaño.width / 2) -200;
-    int y = (tamaño.height / 2) -150;
+        JFrame venContratos = new JFrame("Contratos");
+        Dimension tamaño = Toolkit.getDefaultToolkit().getScreenSize();
+        int x = (tamaño.width / 2) -200;
+        int y = (tamaño.height / 2) -150;
 
-    contratos contratos = new contratos();
+        contratos contratos = new contratos();
 
-    venContratos.setContentPane(contratos.getJContratos());
-    venContratos.setSize(700,500);
-    venContratos.setLocationRelativeTo(null);
-    venContratos.setVisible(true);
+        venContratos.setContentPane(contratos.getJContratos());
+        venContratos.setSize(700,500);
+        venContratos.setLocationRelativeTo(null);
+        venContratos.setVisible(true);
+
     }
 }

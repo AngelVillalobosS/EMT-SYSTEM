@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-import static java.lang.System.*;
 
 
 public class Inicio extends JFrame implements ActionListener
@@ -36,6 +35,8 @@ public class Inicio extends JFrame implements ActionListener
             if (user.equals("admin") && pass.equals("2003")) {
                 JOptionPane.showMessageDialog(null, "BIENVENIDO");
                 mostrarMenu();
+
+
             } else {
                 JOptionPane.showMessageDialog(null, "USUARIO O CONTRASEÑA INCORRECTOS");
             }
@@ -56,5 +57,7 @@ public class Inicio extends JFrame implements ActionListener
         frame.setSize(700, 500);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+
+
     }
 }

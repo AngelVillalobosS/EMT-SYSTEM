@@ -1,23 +1,28 @@
 package gestor.ventanas;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.*;
+
+import gestor.empresarial.*;
+import gestor.empresarial.empleados.Empleados;
 
 public class datosPer extends JFrame implements ActionListener
 {
     private JPanel JDatosPer;
     private JLabel labelId;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
+    private JTextField textFieldID;
+    private JTextField textFieldNombre;
+    private JTextField textFieldCorreo;
     private JLabel labelName;
     private JLabel labeCorreo;
     private JButton buttonRegistrar;
     private JButton buttonMenu;
+    private JTextField textFieldApellido;
+    private JLabel labelApellido;
     private JList list1;
+
+    private Empleados empleados;
 
     public JPanel getJDatosPer()
     {
@@ -28,7 +33,7 @@ public class datosPer extends JFrame implements ActionListener
     {
         buttonRegistrar.addActionListener(this);
         buttonMenu.addActionListener(this);
-
+        empleados = new Empleados();
     }
 
     @Override
@@ -39,8 +44,14 @@ public class datosPer extends JFrame implements ActionListener
             dispose();
         }
 
-        if(e.getSource() == buttonRegistrar)
-        {
+        if(e.getSource() == buttonRegistrar) {
+            String id = textFieldID.getText();
+            String nombre = textFieldNombre.getText();
+            String apellido = textFieldApellido.getText();
+            String correo = textFieldCorreo.getText();
+
+            empleados.addDatosPersonales(nombre,apellido,correo);
+
 
         }
         

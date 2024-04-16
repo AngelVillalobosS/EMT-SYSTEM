@@ -1,6 +1,6 @@
 package gestor.empresarial.datos;
 
-public abstract class DatosPersonales {
+public class DatosPersonales {
     private int id;
     private String nombre;
     private String apellidos;
