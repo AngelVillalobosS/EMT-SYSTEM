@@ -23,7 +23,7 @@ public final class  Empleados implements iEmpleados{
         //j++;
         if (i<100)
         {
-            datos[i] = new DatosEmpresariales((100 + i),id,nombre,Apellidos, Correo);
+            //datos[i] = new DatosEmpresariales((100 + i),id,nombre,Apellidos, Correo);
             this.i++;
         }
     }
@@ -32,23 +32,30 @@ public final class  Empleados implements iEmpleados{
 
     }
 
-    private String findEmpleado(int id){
-        int indEmp = 0;
+    private int findEmpleado(int id){
+//        int indEmp = 0;
+//
+//        for(int j=0; j < this.i ; j++)
+//        {
+//            //if(datos[j].se)
+//        }
+//
+//
+        return id;
+   }
 
-        for(int j=0; j < this.i ; j++)
+    public void setWhatsapp(int id, String whatsapp){
+        int i=findEmpleado(id);
+        if(i>-1)
         {
-            if(datos[j].se)
+            datos[i].set
         }
 
-
-        //return id;
     }
-
-    public void setWhatsapp(String id, String whatsapp){
-
-    }
-    private String datosPersonales(String id){
-        return "pendiente";
+    private String datosPersonales(String id)
+    {
+        String dt = "";
+        dt += "Id " + this.datos[i].getId
     }
     public String getInfoEmpleados(String id){
         return "pendiente";
@@ -57,6 +64,7 @@ public final class  Empleados implements iEmpleados{
         return "pendiente";
     }
     public void setAdscripcion(String id, String Correo){
+
 
     }
     public void setTelefonoExtension(String id, String lada){
