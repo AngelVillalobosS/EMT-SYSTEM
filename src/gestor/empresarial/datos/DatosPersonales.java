@@ -7,11 +7,11 @@ public class DatosPersonales {
     private String correo;
     private String whatsapp;
 
-    protected int getId() {
+    int getId() {
         return id;
     }
 
-    protected void setId(int id) {
+    void setId(int id) {
         this.id = id;
     }
 

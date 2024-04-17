@@ -1,12 +1,16 @@
 package gestor.empresarial.datos;
 
+
 public final class DatosEmpresariales extends DatosPersonales{
     private String adscripcion;
     private String telefonoExterior;
     private String puesto;
 
     public DatosEmpresariales(int id, String nombre, String apellidos, String correo){
-
+        super.setId(id);
+        super.setNombre(nombre);
+        super.setApellidos(apellidos);
+        super.setCorreo(correo);
     }
 
 

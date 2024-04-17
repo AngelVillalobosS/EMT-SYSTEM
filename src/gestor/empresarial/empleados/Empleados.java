@@ -1,13 +1,14 @@
 package gestor.empresarial.empleados;
 import gestor.empresarial.contrato.*;
-import gestor.empresarial.datos.DatosEmpresariales;
+import gestor.empresarial.datos.*;
 import gestor.errores.*;
+import gestor.ventanas.Inicio;
 
-public final class Empleados implements iEmpleados{
+public final class  Empleados implements iEmpleados{
     private  String id;
     public GestionErrores error;
-    Contrato[] contratos;
-    DatosEmpresariales[] datos;
+    private Contrato[] contratos;
+    private DatosEmpresariales[] datos;
     int i, j;
 
     public Empleados(){
@@ -17,21 +18,32 @@ public final class Empleados implements iEmpleados{
         this.j = 0;
     }
 
-    public void addDatosPersonales(String id, String nombre, String Apellidos, String Correo){
-        this.id = id;
-        j++;
+    public void addDatosPersonales(int id, String nombre, String Apellidos, String Correo){
+        //this.id = id;
+        //j++;
+        if (i<100)
+        {
+            datos[i] = new DatosEmpresariales((100 + i),id,nombre,Apellidos, Correo);
+            this.i++;
+        }
     }
 
     public void addContato(String id, String antiguedad, String puesto, Cargos cargo){
 
     }
 
-    private String findEmpleado(String id){
-        return id;
+    private String findEmpleado(int id){
+        int indEmp = 0;
+
+        for(int j=0; j < this.i ; j++)
+        {
+            if(datos[j].se)
+        }
+
+
+        //return id;
     }
-//    private String findEmpleado(String nombre){
-//        return "123";
-//    }
+
     public void setWhatsapp(String id, String whatsapp){
 
     }
