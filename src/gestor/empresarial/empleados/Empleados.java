@@ -18,7 +18,7 @@ public final class Empleados implements iEmpleados{
     }
 
     public void addDatosPersonales(String id, String nombre, String Apellidos, String Correo){
-
+        this.id = id;
         j++;
     }
 

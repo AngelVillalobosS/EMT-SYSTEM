@@ -16,7 +16,7 @@ public class datosEmp extends JFrame implements ActionListener
     private JLabel labelRFC;
     private JButton botonRegistrar;
 
-    public JPanel getJDatosEmp()
+    public JPanel getJDatosEmpr()
     {
         return JDatosEmp;
     }

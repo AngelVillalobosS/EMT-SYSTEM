@@ -1,9 +1,12 @@
 package gestor.ventanas;
 
+import gestor.ventanas.empleados.BusquedaEmpleados;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import gestor.ventanas.empleados.AnniadirEmpleados;
 
 public class Menu extends JFrame implements ActionListener
 {
@@ -13,11 +16,13 @@ public class Menu extends JFrame implements ActionListener
     private JButton datosPersonalesButton;
     private JButton datosEmpresarialesButton;
     private JButton contratosButton;
+    private JButton botonEmpleados;
 
     Menu()
     {
         buttonClose.addActionListener(this);
         datosPersonalesButton.addActionListener(this);
+        botonEmpleados.addActionListener(this);
         datosEmpresarialesButton.addActionListener(this);
         contratosButton.addActionListener(this);
     }
@@ -40,6 +45,10 @@ public class Menu extends JFrame implements ActionListener
             mostarDatosEmpresariales();
         }
 
+        if(e.getSource() == botonEmpleados){
+            mostrarEmpleados();
+        }
+
         if(e.getSource() == contratosButton)
         {
             mostarContratos();
@@ -54,9 +63,9 @@ public class Menu extends JFrame implements ActionListener
     private void mostarDatosPersonales()
     {
         JFrame venDatosPer = new JFrame("DATOS PERSONALES");
-        Dimension tamaño = Toolkit.getDefaultToolkit().getScreenSize();
-        int x = (tamaño.width / 2) -200;
-        int y = (tamaño.height / 2) -150;
+        Dimension tamannio = Toolkit.getDefaultToolkit().getScreenSize();
+        int x = (tamannio.width / 2) -200;
+        int y = (tamannio.height / 2) -150;
 
         datosPer datosPer = new datosPer();
 
@@ -67,16 +76,27 @@ public class Menu extends JFrame implements ActionListener
         venDatosPer.setVisible(true);
     }
 
+    private void mostrarEmpleados(){
+        JFrame ventEmpleados = new JFrame("EMPLEADOS");
+        Dimension tamannio = Toolkit.getDefaultToolkit().getScreenSize();
+        int x = (tamannio.width / 2) - 200;
+        int y = (tamannio.height / 2) - 150;
+
+        AnniadirEmpleados empleados = new datosEmp();
+
+        ventEmpleados.setContentPane(datosEmp.getJDatosEmpr());
+    }
+
     private void mostarDatosEmpresariales()
     {
         JFrame venDatosEmp = new JFrame("DATOS EMPRESARIALES");
-        Dimension tamaño = Toolkit.getDefaultToolkit().getScreenSize();
-        int x = (tamaño.width / 2) -200;
-        int y = (tamaño.height / 2) -150;
+        Dimension tamannio = Toolkit.getDefaultToolkit().getScreenSize();
+        int x = (tamannio.width / 2) -200;
+        int y = (tamannio.height / 2) -150;
 
         datosEmp datosEmp = new datosEmp();
 
-        venDatosEmp.setContentPane(datosEmp.getJDatosEmp());
+        venDatosEmp.setContentPane(datosEmp.getJDatosEmpr());
         venDatosEmp.setSize(700,500);
         venDatosEmp.setLocationRelativeTo(null);
         venDatosEmp.setVisible(true);
@@ -86,9 +106,9 @@ public class Menu extends JFrame implements ActionListener
     private void mostarContratos()
     {
         JFrame venContratos = new JFrame("Contratos");
-        Dimension tamaño = Toolkit.getDefaultToolkit().getScreenSize();
-        int x = (tamaño.width / 2) -200;
-        int y = (tamaño.height / 2) -150;
+        Dimension tamannio = Toolkit.getDefaultToolkit().getScreenSize();
+        int x = (tamannio.width / 2) -200;
+        int y = (tamannio.height / 2) -150;
 
         contratos contratos = new contratos();
 

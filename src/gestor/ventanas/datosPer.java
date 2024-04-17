@@ -4,7 +4,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import gestor.empresarial.datos.DatosPersonales;
 import gestor.empresarial.empleados.Empleados;
+import gestor.ventanas.Menu;
 
 public class datosPer extends JFrame implements ActionListener
 {
@@ -40,7 +42,9 @@ public class datosPer extends JFrame implements ActionListener
     {
         if(e.getSource() == buttonMenu)
         {
-            dispose();
+            JMenu nuevoMenu = new JMenu();
+            nuevoMenu.setVisible(true);
+            this.dispose();
         }
 
         if(e.getSource() == buttonRegistrar) {
@@ -50,6 +54,7 @@ public class datosPer extends JFrame implements ActionListener
             String correo = emailField.getText();
 
             empleados.addDatosPersonales(id, nombre, apellido, correo);
+
         }
     }
 }

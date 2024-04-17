@@ -11,6 +11,7 @@ public final class ArchivoTexto implements iFileText {
     private boolean modoLectura;
     private boolean modoEscritura;
 
+    //TituloArchivo equivale a la DIRECTORIO del archivo
     public ArchivoTexto(String tituloArchivo){
         try {
             file = new File(tituloArchivo);
