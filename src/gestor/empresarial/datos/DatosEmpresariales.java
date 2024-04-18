@@ -14,27 +14,27 @@ public final class DatosEmpresariales extends DatosPersonales{
     }
 
 
-    String getAdscripcion() {
+    public String getAdscripcion() {
         return adscripcion;
     }
 
-    void setAdscripcion(String adscripcion) {
+    public void setAdscripcion(String adscripcion) {
         this.adscripcion = adscripcion;
     }
 
-    String getTelefonoExterior() {
+    public String getTelefonoExterior() {
         return telefonoExterior;
     }
 
-    void setTelefonoExterior(String telefonoExterior) {
+    public void setTelefonoExterior(String telefonoExterior) {
         this.telefonoExterior = telefonoExterior;
     }
 
-    String getPuesto() {
+    public String getPuesto() {
         return puesto;
     }
 
-    void setPuesto(String puesto) {
+    public void setPuesto(String puesto) {
         this.puesto = puesto;
     }
 }

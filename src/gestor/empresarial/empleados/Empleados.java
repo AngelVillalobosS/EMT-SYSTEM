@@ -1,7 +1,7 @@
 package gestor.empresarial.empleados;
 import gestor.empresarial.contrato.*;
 import gestor.empresarial.datos.*;
-import gestor.errores.*;
+import gestor.errores.GestionErrores;
 import gestor.ventanas.Inicio;
 
 public final class  Empleados implements iEmpleados{
@@ -16,14 +16,15 @@ public final class  Empleados implements iEmpleados{
         datos = new DatosEmpresariales[100];
         this.i = 0;
         this.j = 0;
+
     }
 
-    public void addDatosPersonales(int id, String nombre, String Apellidos, String Correo){
+    public void addDatosPersonales(String id, String nombre, String Apellidos, String Correo){
         //this.id = id;
         //j++;
         if (i<100)
         {
-            //datos[i] = new DatosEmpresariales((100 + i),id,nombre,Apellidos, Correo);
+            datos[i] = new DatosEmpresariales((100 + i) ,nombre, Apellidos, Correo);
             this.i++;
         }
     }
@@ -33,29 +34,39 @@ public final class  Empleados implements iEmpleados{
     }
 
     private int findEmpleado(int id){
-//        int indEmp = 0;
-//
-//        for(int j=0; j < this.i ; j++)
-//        {
-//            //if(datos[j].se)
-//        }
-//
-//
-        return id;
+        int indEmp = 0;
+
+        for(int j=0; j < this.i ; j++)
+        {
+            if(datos[j].getId()==id)
+            {
+                indEmp=j;
+            }
+        }
+        return indEmp;
    }
 
     public void setWhatsapp(int id, String whatsapp){
         int i=findEmpleado(id);
         if(i>-1)
         {
-            datos[i].set
+            datos[i].setWhatsapp(whatsapp);
+        }
+        else
+        {
+            ;
         }
 
     }
     private String datosPersonales(String id)
     {
         String dt = "";
-        dt += "Id " + this.datos[i].getId
+        dt += "Id " + this.datos[i].getId() + "\n";
+        dt += "Nombre: " + this.datos[i].getNombre();
+//        dt +=
+//        dt +=
+//        dt +=
+        return "Hola";
     }
     public String getInfoEmpleados(String id){
         return "pendiente";

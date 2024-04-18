@@ -9,9 +9,10 @@ public class AnniadirEmpleados {
     private JTextField textField2;
     private JTextField textField3;
     private JTextField textField4;
+    private JPanel JPanel001;
 
     public JPanel getJDatosEmp()
     {
-        return JDatosEmpl;
+        return JDatosEmp;
     }
 }

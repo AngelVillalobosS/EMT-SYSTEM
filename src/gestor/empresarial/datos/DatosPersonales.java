@@ -7,43 +7,48 @@ public class DatosPersonales {
     private String correo;
     private String whatsapp;
 
-    int getId() {
+    public DatosPersonales()
+    {
+
+    }
+
+    public int getId() {
         return id;
     }
 
-    void setId(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    protected String getNombre() {
+    public String getNombre() {
         return nombre;
     }
 
-    protected void setNombre(String nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    protected String getApellidos() {
+    public String getApellidos() {
         return apellidos;
     }
 
-    protected void setApellidos(String apellidos) {
+    public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
     }
 
-    protected String getCorreo() {
+    public String getCorreo() {
         return correo;
     }
 
-    protected void setCorreo(String correo) {
+    public void setCorreo(String correo) {
         this.correo = correo;
     }
 
-    protected String getWhatsapp() {
+    public String getWhatsapp() {
         return whatsapp;
     }
 
-    protected void setWhatsapp(String whatsapp) {
+    public void setWhatsapp(String whatsapp) {
         this.whatsapp = whatsapp;
     }
 }
