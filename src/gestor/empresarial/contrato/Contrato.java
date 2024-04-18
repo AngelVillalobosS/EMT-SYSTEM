@@ -8,7 +8,7 @@ public class Contrato {
     private Cargos tipoCargo;
 
     public Contrato(int id){
-        tipoCargo = Cargos.confianza;
+        tipoCargo = Cargos.CONFIANZA;
     }
 
     public int getNoContrato() {

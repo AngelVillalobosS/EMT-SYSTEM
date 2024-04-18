@@ -15,7 +15,7 @@ public class GestionErrores {
         archivoerrores.AbrirModoEscritura();
         error.put(1, "Datos Incorrectos");
         error.put(2, "Acceso Denegado");
-        error.put(3, "Valor Inesperado");
+        error.put(3, "Dato obligatorio no ingresado");
         error.put(4, "Error de sintaxis");
         error.put(5, "Error de conexión");
         error.put(6, "Archivo no encontrado");

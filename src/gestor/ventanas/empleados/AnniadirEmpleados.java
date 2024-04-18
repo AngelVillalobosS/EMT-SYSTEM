@@ -11,8 +11,8 @@ public class AnniadirEmpleados {
     private JTextField textField4;
     private JPanel JPanel001;
 
-    public JPanel getJDatosEmp()
-    {
-        return JDatosEmp;
-    }
+//    public JPanel getJDatosEmp()
+//    {
+////        return JDatosEmp;
+//    }
 }

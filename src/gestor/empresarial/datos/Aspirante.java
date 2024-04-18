@@ -1,22 +1,24 @@
 package gestor.empresarial.datos;
 
-public class DatosPersonales {
-    private int id;
+import java.io.Serializable;
+
+public class Aspirante implements Serializable {
+    private String id;
     private String nombre;
     private String apellidos;
     private String correo;
     private String whatsapp;
 
-    public DatosPersonales()
+    public Aspirante(String id)
     {
-
+        this.id = id;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -51,4 +53,6 @@ public class DatosPersonales {
     public void setWhatsapp(String whatsapp) {
         this.whatsapp = whatsapp;
     }
+
+
 }

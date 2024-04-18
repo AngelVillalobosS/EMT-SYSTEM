@@ -2,7 +2,6 @@ package gestor.empresarial.empleados;
 import gestor.empresarial.contrato.*;
 import gestor.empresarial.datos.*;
 import gestor.errores.GestionErrores;
-import gestor.ventanas.Inicio;
 
 public final class  Empleados implements iEmpleados{
     private  String id;
@@ -19,26 +18,29 @@ public final class  Empleados implements iEmpleados{
 
     }
 
-    public void addDatosPersonales(String id, String nombre, String Apellidos, String Correo){
-        //this.id = id;
-        //j++;
+    public boolean addAspirante(String id, String nombre, String apellidos, String correo){
         if (i<100)
         {
-            datos[i] = new DatosEmpresariales((100 + i) ,nombre, Apellidos, Correo);
+            System.out.println("Se ha anniadido un nuevo aspirante");
+            datos[i] = new DatosEmpresariales(id, nombre, apellidos, correo);
             this.i++;
+        } else {
+            System.out.println("El arreglo ha alcanzado su limite");
+            return false;
         }
+        return true;
     }
 
     public void addContato(String id, String antiguedad, String puesto, Cargos cargo){
 
     }
 
-    private int findEmpleado(int id){
+    private int findEmpleado(String id){
         int indEmp = 0;
 
         for(int j=0; j < this.i ; j++)
         {
-            if(datos[j].getId()==id)
+            if(datos[j].getId().equals(id))
             {
                 indEmp=j;
             }
@@ -46,9 +48,9 @@ public final class  Empleados implements iEmpleados{
         return indEmp;
    }
 
-    public void setWhatsapp(int id, String whatsapp){
-        int i=findEmpleado(id);
-        if(i>-1)
+    public void setWhatsapp(String id, String whatsapp){
+        int i = findEmpleado(id);
+        if(i > -1)
         {
             datos[i].setWhatsapp(whatsapp);
         }

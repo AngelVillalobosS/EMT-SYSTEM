@@ -29,8 +29,8 @@ public final class ArchivoTexto implements iFileText {
     }
 
 
-    public ArchivoTexto(String nomArchivo, boolean modoLectura) {
-        this.file = new File(nomArchivo);
+    public ArchivoTexto(String titulo, boolean modoLectura) {
+        this.file = new File(titulo);
         this.archivoExiste = file.exists();
         this.modoEscritura = !modoLectura;
         this.modoLectura = modoLectura;

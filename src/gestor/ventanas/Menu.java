@@ -82,9 +82,9 @@ public class Menu extends JFrame implements ActionListener
         int x = (tamannio.width / 2) - 200;
         int y = (tamannio.height / 2) - 150;
 
-        AnniadirEmpleados empleados = new datosEmp();
+//        AnniadirEmpleados empleados = new datosEmp();
 
-        ventEmpleados.setContentPane(datosEmp.getJDatosEmpr());
+//        ventEmpleados.setContentPane(datosEmp.getJDatosEmpr());
     }
 
     private void mostarDatosEmpresariales()

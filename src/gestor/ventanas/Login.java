@@ -3,9 +3,7 @@ package gestor.ventanas;
 import javax.swing.*;
 import java.awt.event.*;
 
-
-
-public class Inicio extends JFrame implements ActionListener
+public class Login extends JFrame implements ActionListener
 {
     private JPanel panelInicio;
     private JButton buttonCerrar;
@@ -16,7 +14,7 @@ public class Inicio extends JFrame implements ActionListener
     private JPasswordField passwordText;
     private JLabel Imagen;
 
-    public Inicio() {
+    public Login() {
         buttonLogin.addActionListener(this);
         buttonCerrar.addActionListener(this);
     }
@@ -31,7 +29,7 @@ public class Inicio extends JFrame implements ActionListener
             String user = usuarioTexto.getText();
             String pass = new String(passwordText.getPassword());
 
-            if (user.equals("admin") && pass.equals("2003")) {
+            if (user.equals("admin") && pass.equals("2003") || user.equals("RH") && pass.equals("emt")) {
                 JOptionPane.showMessageDialog(null, "BIENVENIDO");
                 mostrarMenu();
 
@@ -43,8 +41,6 @@ public class Inicio extends JFrame implements ActionListener
            System.exit(0);
         }
     }
-
-
 
     private void mostrarMenu() {
         JFrame frame = new JFrame("MENU");
