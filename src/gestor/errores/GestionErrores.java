@@ -37,6 +37,13 @@ public class GestionErrores {
         return error.get(folio);
     }
     public String getErrorTecnico(){
+        archivoerrores = new ArchivoTexto("C:\\Users\\LC11-8\\Documents\\ArchivosErrores\\errorestecnicos.txt");
+        archivoerrores.AbrirModoEscritura();
+        error.put(11, "Error interno del servidor");
+        error.put(12, "La conexion con el servidor ha expirado");
+        error.put(13, "Error de lectura del disco");
+        error.put(14, "Conflicto de version de software");
+        error.put(15, "Error de red");
         return "Pendiente";
     }
     public boolean existeError(){
