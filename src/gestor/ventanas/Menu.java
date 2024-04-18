@@ -118,4 +118,16 @@ public class Menu extends JFrame implements ActionListener
         venContratos.setVisible(true);
 
     }
+
+    public void mostrarMenu() {
+        JFrame frame = new JFrame("MENU");
+
+        Menu menu = new Menu();
+
+        frame.setContentPane(menu.getJMenu());
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setSize(700, 500);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+    }
 }

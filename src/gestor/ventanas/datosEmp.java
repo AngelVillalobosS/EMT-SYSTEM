@@ -36,13 +36,18 @@ public class datosEmp extends JFrame implements ActionListener
     private Empleados empleado;
     private Empresa empresa;
 
+    private JMenu menu;
+    private DatosEmpresariales datosEmpleado;
+
     public JPanel getJDatosEmpr()
     {
         return JDatosEmp;
     }
 
-    datosEmp()
+    public datosEmp()
     {
+        menu = new JMenu();
+        datosEmpleado = new DatosEmpresariales(textFieldID.getText(), textFieldAdscripcion.getText(), textFieldTelefonoE.getText(), textFielPuesto.getText());
         botonMenu.addActionListener(this);
         botonRegistrar.addActionListener(this);
         //datosE = new DatosEmpresariales(2,"x" , "x", "x");
@@ -55,7 +60,9 @@ public class datosEmp extends JFrame implements ActionListener
     {
         if(e.getSource() == botonMenu)
         {
-            System.exit(0);
+            JMenu nuevoMenu = new JMenu();
+            nuevoMenu.setVisible(true);
+            this.dispose();
         }
 
         if(e.getSource() == botonRegistrar)
@@ -81,6 +88,9 @@ public class datosEmp extends JFrame implements ActionListener
 
         if(e.getSource() == buttonMostrar)
         {
+            System.out.println("Has clickeado Mostrar");
+            String id = textFieldID.getText();
+
 
         }
     }

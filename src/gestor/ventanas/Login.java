@@ -2,7 +2,7 @@ package gestor.ventanas;
 
 import javax.swing.*;
 import java.awt.event.*;
-
+import gestor.ventanas.Menu;
 public class Login extends JFrame implements ActionListener
 {
     private JPanel panelInicio;
@@ -52,7 +52,5 @@ public class Login extends JFrame implements ActionListener
         frame.setSize(700, 500);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-
-
     }
 }

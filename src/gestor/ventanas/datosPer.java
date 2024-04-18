@@ -43,10 +43,10 @@ public class datosPer extends JFrame implements ActionListener
     @Override
     public void actionPerformed(ActionEvent e)
     {
-        System.out.println(e.getSource());
-        System.out.println("Se hizo click en Registrar");
+        System.out.println("Se ingreso a la clase ");
         if(e.getSource() == buttonMenu)
         {
+            System.out.println("Se clickeo menu");
             JMenu nuevoMenu = new JMenu();
             nuevoMenu.setVisible(true);
             this.dispose();
@@ -64,7 +64,7 @@ public class datosPer extends JFrame implements ActionListener
 //                textField_1.getText().length()==0
             } else{
                 System.out.println("Error al guardar");
-                JOptionPane.showMessageDialog(null, error.getError(3));
+                JOptionPane.showMessageDialog(null, error.getError(9));
             }
         }
     }
