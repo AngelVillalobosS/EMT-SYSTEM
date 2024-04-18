@@ -2,6 +2,7 @@ package gestor.ventanas;
 
 import gestor.empresarial.contrato.Contrato;
 import gestor.empresarial.datos.DatosEmpresariales;
+import gestor.empresarial.empleados.Empleados;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -22,6 +23,7 @@ public class contratos extends JFrame implements ActionListener
     private JComboBox comboBox1;
     private JButton buttonRegistar;
     private Contrato contrato;
+    private Empleados empleado;
 
 
     public JPanel getJContratos()
@@ -34,7 +36,8 @@ public class contratos extends JFrame implements ActionListener
         buttonMenu.addActionListener(this);
         buttonRegistar.addActionListener(this);
         comboBox1.setModel(new DefaultComboBoxModel<>(Cargos.values()));
-        contrato = new Contrato(0);
+        //contrato = new Contrato(0);
+        empleado = new Empleados();
 
     }
 
@@ -50,7 +53,7 @@ public class contratos extends JFrame implements ActionListener
         {
             Cargos cargo = (Cargos) comboBox1.getSelectedItem();
             String opcionCargo = cargo.toString();
-
+            //empleado.setCargo();
             //JOptionPane.showMessageDialog(this,opcionCargo);
 
             int numeroContraro = textFieldNumero.getColumns();
@@ -59,8 +62,7 @@ public class contratos extends JFrame implements ActionListener
             int anno = textFieldAnno.getColumns();
             contrato.setNoContrato(anno);
 
-
-
+            String id = textFieldID.getText();
 
 
         }
