@@ -46,7 +46,8 @@ public class Inicio extends JFrame implements ActionListener
 
 
 
-    private void mostrarMenu() {
+    public void mostrarMenu()
+    {
         JFrame frame = new JFrame("MENU");
 
         Menu menu = new Menu();

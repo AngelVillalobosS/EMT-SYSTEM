@@ -7,9 +7,15 @@ public class Contrato {
     private String horario;
     private Cargos tipoCargo;
 
-    public Contrato(int id){
-        tipoCargo = Cargos.confianza;
+    public Contrato(int id, int noContrato, int annio) {
+        this.noContrato = noContrato;
+        this.annio=annio;
+        this.id=id;
     }
+
+//    public Contrato(int id){
+//        tipoCargo = Cargos.confianza;
+//    }
 
     public int getNoContrato() {
         return noContrato;
@@ -26,4 +32,13 @@ public class Contrato {
     public void setAnnio(int annio) {
         this.annio = annio;
     }
+
+    public Cargos getCargo() {
+        return tipoCargo;
+    }
+
+    public void setCargo(Cargos cargo) {
+        this.tipoCargo = cargo;
+    }
 }
+

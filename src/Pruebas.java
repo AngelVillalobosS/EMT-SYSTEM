@@ -15,6 +15,7 @@ public class Pruebas
 
         frame.setContentPane(incio.getPanelInicio());
         frame.setSize(600, 500);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocation(x, y);
         frame.setVisible(true);
 
