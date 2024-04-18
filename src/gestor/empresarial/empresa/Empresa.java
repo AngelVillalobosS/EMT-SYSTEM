@@ -10,20 +10,32 @@ public final class Empresa {
     public Empleados datosRH;
     public GestionErrores error;
 
-    public Empresa(String nombreEmpresa, String represetanteLegal){
-
+    public Empresa(String nombreEmpresa, String rfc){
+        this.nombreEmpresa=nombreEmpresa;
+        this.rfc=rfc;
     }
 
-    public void setRepresetanteLegal(String nombre){
+    public void setRepresetanteLegal(String repreentanteLegal){
+        this.represetanteLegal = repreentanteLegal;
 
     }
     public String getRepresetanteLegal(){
-        return "Pendiente";
+        return represetanteLegal;
     }
-    public void setTelefono(String Telefono){
+    public void setTelefono(String TelefonoE){
+        this.telefono = TelefonoE;
+    }
 
+    public String getInfo()
+    {
+        String datos="";
+
+        datos += "Representante Legal: " + this.represetanteLegal + "\n";
+        datos += "Empresa: " + this.nombreEmpresa + "\n";
+        datos += "RFC: " + this.rfc + "\n";
+        datos += "Teléfono empresarial: " + (this.telefono!=null ? this.telefono : "No registrado") + "\n";
+
+        return datos;
     }
-    public String getInfo(){
-        return "Pendiente";
-    }
+
 }
