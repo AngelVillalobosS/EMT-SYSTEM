@@ -16,6 +16,13 @@ public class GestionErrores {
         error.put(1, "Datos Incorrectos");
         error.put(2, "Acceso Denegado");
         error.put(3, "Valor Inesperado");
+        error.put(4, "Error de sintaxis");
+        error.put(5, "Error de conexión");
+        error.put(6, "Archivo no encontrado");
+        error.put(7, "Memoria Insuficiente");
+        error.put(8, "Registro duplicado");
+        error.put(9, "Campos obligatorios incompletos");
+        error.put(10, "Error al guardar");
     }
 
     private void cargarErrores(){
