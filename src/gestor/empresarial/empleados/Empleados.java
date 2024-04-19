@@ -106,8 +106,9 @@ public final class  Empleados implements iEmpleados{
             System.out.println("Error al buscar por ID: Número de empleado no existente");
             return "";
         }
-        else
+        else {
             return datosPersonales(i);
+        }
     }
 
     @Override
@@ -122,8 +123,9 @@ public final class  Empleados implements iEmpleados{
             System.out.println("Error al buscar por Nombre: Número de empleado no existente");
             return "";
         }
-        else
+        else {
             return datosPersonales(i);
+        }
     }
 
     @Override
@@ -136,36 +138,38 @@ public final class  Empleados implements iEmpleados{
         if (i > -1) {
             datos[i].setAdscripcion(adscripcion);
         }
-        else
+        else {
             return;
-        //mensaje de error
-
+            //mensaje de error
+        }
     }
     public void setTelefonoExtension(String id, String lada){
         int i=findEmpleado(id);
         if (i > -1) {
             datos[i].setTelefonoExterior(lada);
         }
-        else
+        else {
             return;
-        //mensaje de error
+            //mensaje de error
+        }
     }
     public void setPuesto(String id, String puesto){
-        int i=findEmpleado(id);
+        int i = findEmpleado(id);
         if (i > -1) {
             datos[i].setPuesto(puesto);
         }
-        else
+        else {
             System.out.println("Error al registrar puesto: Número de empleado no existente");
-
+        }
     }
     public void showDatosEmpleados(){
         if (this.i >0) {
             for (int j = 0; j < this.i; j++)
                 System.out.println(datosPersonales(j));
         }
-        else
+        else {
             System.out.println("Error al mostrar todos los empleados: No hay empleados registrados");
+        }
     }
     public void showContratoEmpleado(String id){
         if (this.i > 0) {
@@ -189,11 +193,11 @@ public final class  Empleados implements iEmpleados{
 //    }
     public void setCargo(Cargos cargo){
         int i=findEmpleado(id);
-        if (i > -1) {
+        if (i >= 0) {
             contratos[i].setCargo(cargo);
         }
-        else
+        else {
             System.out.println("Error al registrar cargo: Número de empleado no existente");
-
+        }
     }
 }

@@ -19,6 +19,7 @@ public class datosPer extends JFrame implements ActionListener
     private JButton buttonMenu;
     private JTextField apellidoField;
     private JLabel labelApellido;
+    private JTextField textField1;
     private JList list1;
     private GestionErrores error;
 
