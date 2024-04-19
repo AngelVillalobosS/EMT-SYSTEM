@@ -31,6 +31,7 @@ public class datosPer extends JFrame implements ActionListener
         return JDatosPer;
     }
 
+    //Construtor de datosPer
     public datosPer()
     {
         System.out.println("DatosPer");
@@ -44,6 +45,8 @@ public class datosPer extends JFrame implements ActionListener
     public void actionPerformed(ActionEvent e)
     {
         System.out.println("Se ingreso a la clase ");
+
+        //if que actua al recibir un click en boton Menu
         if(e.getSource() == buttonMenu)
         {
             System.out.println("Se clickeo menu");
@@ -52,7 +55,9 @@ public class datosPer extends JFrame implements ActionListener
             this.dispose();
         }
 
+        //if que actual al seleccionar el boton registrar
         if(e.getSource().equals(buttonRegistrar)) {
+            //Se valida que no haya ninguna casilla vacia
             if (!idField.getText().isEmpty() && !nombreField.getText().isEmpty() && !apellidoField.getText().isEmpty() && !emailField.getText().isEmpty()){
                 System.out.println("Se entro a registrar");
                 String id = idField.getText();
@@ -61,8 +66,9 @@ public class datosPer extends JFrame implements ActionListener
                 String correo = emailField.getText();
                 empleados.addAspirante(id, nombre, apellido, correo);
                 JOptionPane.showMessageDialog(null, "Se ha registrado con éxito");
-//                textField_1.getText().length()==0
+
             } else{
+                //En dado caso que haya una casilla vacia se manda un mensaje de error
                 System.out.println("Error al guardar");
                 JOptionPane.showMessageDialog(null, error.getError(9));
             }

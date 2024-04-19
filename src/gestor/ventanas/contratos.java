@@ -56,8 +56,8 @@ public class contratos extends JFrame implements ActionListener
             //empleado.setCargo();
             //JOptionPane.showMessageDialog(this,opcionCargo);
 
-            int numeroContraro = textFieldNumero.getColumns();
-            contrato.setNoContrato(numeroContraro);
+            int numeroContrato = textFieldNumero.getColumns();
+            contrato.setNoContrato(numeroContrato);
 
             int anno = textFieldAnno.getColumns();
             contrato.setNoContrato(anno);
