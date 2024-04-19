@@ -97,7 +97,7 @@ public class Menu extends JFrame implements ActionListener
         datosEmp datosEmp = new datosEmp();
 
         venDatosEmp.setContentPane(datosEmp.getJDatosEmpr());
-        venDatosEmp.setSize(700,500);
+        venDatosEmp.setSize(1200,800);
         venDatosEmp.setLocationRelativeTo(null);
         venDatosEmp.setVisible(true);
 

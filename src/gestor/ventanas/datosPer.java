@@ -65,6 +65,7 @@ public class datosPer extends JFrame implements ActionListener
                 String apellido = apellidoField.getText();
                 String correo = emailField.getText();
                 empleados.addAspirante(id, nombre, apellido, correo);
+
                 JOptionPane.showMessageDialog(null, "Se ha registrado con éxito");
 
             } else{

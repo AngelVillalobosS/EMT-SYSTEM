@@ -2,7 +2,7 @@ import gestor.ventanas.Login;
 import javax.swing.*;
 import java.awt.*;
 
-public class Pruebas
+public class  Pruebas
 {
     public static void main(String[] args)
     {

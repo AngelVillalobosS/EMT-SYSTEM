@@ -67,23 +67,23 @@ public class datosEmp extends JFrame implements ActionListener
 
         if(e.getSource() == botonRegistrar)
         {
-            int id = textFieldID.getColumns();
+            String id = textFieldID.getText();
             String Ads = textFieldAdscripcion.getText();
-            int lada = textFieldLada.getColumns();
-            int tel = textFieldTelEmpl.getColumns();
+            String lada = textFieldLada.getText();
+            String tel = textFieldTelEmpl.getText();
             String puesto = textFielPuesto.getText();
 
             String nomEmp = nombreEmField.getText();
             String telEmp = textFieldTelefonoE.getText();
             String rfc = rfcField.getText();
 
-            datosE.setAdscripcion(Ads);
-            //empleado.setTelefonoExtension(String.id, lada);
-            //datosE.
-            datosE.setPuesto(puesto);
-            empresa = new Empresa(nomEmp, rfc);
-            empresa.setTelefono(telEmp);
+            empleado.setAdscripcion(id,Ads);
+            empleado.setTelefonoExtension(id, lada);
+            empleado.setWhatsapp(Integer.parseInt(id), tel);
+            empleado.setPuesto(id, puesto);
 
+            new Empresa(nomEmp,rfc);
+            empresa.setTelefonoE(telEmp);
         }
 
         if(e.getSource() == buttonMostrar)
