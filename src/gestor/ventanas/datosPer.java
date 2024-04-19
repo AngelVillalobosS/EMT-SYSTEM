@@ -60,7 +60,7 @@ public class datosPer extends JFrame implements ActionListener
             //Se valida que no haya ninguna casilla vacia
             if (!idField.getText().isEmpty() && !nombreField.getText().isEmpty() && !apellidoField.getText().isEmpty() && !emailField.getText().isEmpty()){
                 System.out.println("Se entro a registrar");
-                String id = idField.getText();
+                Integer id = idField.getColumns();
                 String nombre = nombreField.getText();
                 String apellido = apellidoField.getText();
                 String correo = emailField.getText();

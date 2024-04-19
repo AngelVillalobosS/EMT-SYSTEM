@@ -18,7 +18,7 @@ public final class  Empleados implements iEmpleados{
 
     }
 
-    public boolean addAspirante(String id, String nombre, String apellidos, String correo){
+    public boolean addAspirante(int id, String nombre, String apellidos, String correo){
         if (i<100)
         {
             System.out.println("Se ha anniadido un nuevo aspirante");
@@ -46,17 +46,15 @@ public final class  Empleados implements iEmpleados{
     }
 
     private int findEmpleado(int id){
-        int indEmp = -1;
+        int indiceI=-1;
 
-        for(int j=0; j < this.i ; j++)
+        for (int j=0; j < this.i ; j++)
         {
-            //if(datos[j].getId() == id)
-            {
-                indEmp=j;
-                break;
-            }
+            if (datos[j].getId() == id)
+                indiceI=j;
         }
-        return indEmp;
+
+        return indiceI;
     }
 
     private int findEmpleado(String nombre){

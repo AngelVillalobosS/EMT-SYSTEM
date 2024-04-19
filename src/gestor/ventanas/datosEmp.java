@@ -47,7 +47,7 @@ public class datosEmp extends JFrame implements ActionListener
     public datosEmp()
     {
         menu = new JMenu();
-        datosEmpleado = new DatosEmpresariales(textFieldID.getText(), textFieldAdscripcion.getText(), textFieldTelefonoE.getText(), textFielPuesto.getText());
+        datosEmpleado = new DatosEmpresariales(12,"a", "23131", "231");
         botonMenu.addActionListener(this);
         botonRegistrar.addActionListener(this);
         //datosE = new DatosEmpresariales(2,"x" , "x", "x");

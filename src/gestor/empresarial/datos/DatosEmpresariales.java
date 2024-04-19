@@ -6,7 +6,7 @@ public final class DatosEmpresariales extends Aspirante {
     private String telefonoExterior;
     private String puesto;
 
-    public DatosEmpresariales(String id, String adscripcion, String telefonoExterior, String puesto){
+    public DatosEmpresariales(int id, String adscripcion, String telefonoExterior, String puesto){
         super(id);
         super.setId(id);
         super.setNombre(adscripcion);

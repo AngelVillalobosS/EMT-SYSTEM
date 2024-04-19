@@ -3,22 +3,22 @@ package gestor.empresarial.datos;
 import java.io.Serializable;
 
 public class Aspirante implements Serializable {
-    private String id;
+    private int id;
     private String nombre;
     private String apellidos;
     private String correo;
     private String whatsapp;
 
-    public Aspirante(String id)
+    public Aspirante(int id)
     {
         this.id = id;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
