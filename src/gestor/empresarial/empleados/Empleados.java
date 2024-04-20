@@ -1,7 +1,12 @@
 package gestor.empresarial.empleados;
+
 import gestor.empresarial.contrato.*;
 import gestor.empresarial.datos.*;
 import gestor.errores.GestionErrores;
+import mysql.ConectorMySQL;
+
+import java.sql.*;
+
 
 public final class  Empleados implements iEmpleados{
     private  String id;
@@ -18,17 +23,25 @@ public final class  Empleados implements iEmpleados{
 
     }
 
-    public boolean addAspirante(int id, String nombre, String apellidos, String correo){
-        if (i<100)
-        {
-            System.out.println("Se ha anniadido un nuevo aspirante");
-            datos[i] = new DatosEmpresariales(id, nombre, apellidos, correo);
-            this.i++;
-        } else {
-            System.out.println("El arreglo ha alcanzado su limite");
-            return false;
+    public int addAspirante(String nombre, String apellidos, String correo, String whatsapp){
+
+        String sql = "INSERT INTO Aspirante (nombre, apellidos, correo, whatsapp) VALUES (?, ?, ?, ?)";
+        try (Connection conn = ConectorMySQL.getInstance();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            // Set parameters for the PreparedStatement
+            pstmt.setString(1, nombre);
+            pstmt.setString(2, apellidos);
+            pstmt.setString(3, correo);
+            pstmt.setString(4, whatsapp);
+
+            // Execute the insert statement
+            int affectedRows = pstmt.executeUpdate();
+            return affectedRows;
+        } catch (SQLException e) {
+            System.out.println("SQL Error: " + e.getMessage());
         }
-        return true;
+        return 0;
     }
 
     public void addContato(String id, int anno)

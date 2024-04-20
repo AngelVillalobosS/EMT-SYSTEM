@@ -18,7 +18,7 @@ public class datosPer extends JFrame implements ActionListener
     private JButton buttonMenu;
     private JTextField apellidoField;
     private JLabel labelApellido;
-    private JTextField textFieldWhatapp;
+    private JTextField whatsappField;
     private JLabel labelWhats;
     private JButton buttonMostrar;
     private JList list1;
@@ -60,16 +60,16 @@ public class datosPer extends JFrame implements ActionListener
         //if que actual al seleccionar el boton registrar
         if(e.getSource().equals(buttonRegistrar)) {
             //Se valida que no haya ninguna casilla vacia
-            if (!idField.getText().isEmpty() && !nombreField.getText().isEmpty() && !apellidoField.getText().isEmpty() && !emailField.getText().isEmpty()){
+            if (!nombreField.getText().isEmpty() && !apellidoField.getText().isEmpty() && !emailField.getText().isEmpty() && !whatsappField.getText().isEmpty()){
                 System.out.println("Se entro a registrar");
-                Integer id = idField.getColumns();
                 String nombre = nombreField.getText();
                 String apellido = apellidoField.getText();
                 String correo = emailField.getText();
-                empleados.addAspirante(id, nombre, apellido, correo);
+                String whatsapp = whatsappField.getText();
 
-                JOptionPane.showMessageDialog(null, "Se ha registrado con éxito");
+                int resultado = empleados.addAspirante(nombre, apellido, correo, whatsapp);
 
+                JOptionPane.showMessageDialog(null, "Se ha registrado con éxito " + resultado);
             } else{
                 //En dado caso que haya una casilla vacia se manda un mensaje de error
                 System.out.println("Error al guardar");

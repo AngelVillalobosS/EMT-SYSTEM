@@ -1,4 +1,6 @@
 import gestor.ventanas.Login;
+import mysql.DatabaseTest;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -18,5 +20,8 @@ public class  Pruebas
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocation(x, y);
         frame.setVisible(true);
+
+        DatabaseTest.main();
+
     }
 }
