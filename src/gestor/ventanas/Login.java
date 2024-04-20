@@ -48,8 +48,8 @@ public class Login extends JFrame implements ActionListener
         Menu menu = new Menu();
 
         frame.setContentPane(menu.getJMenu());
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.setSize(700, 500);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(900, 600);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }

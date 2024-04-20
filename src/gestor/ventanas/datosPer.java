@@ -9,7 +9,6 @@ import gestor.errores.GestionErrores;
 public class datosPer extends JFrame implements ActionListener
 {
     private JPanel JDatosPer;
-    private JLabel labelId;
     private JTextField idField;
     private JTextField nombreField;
     private JTextField emailField;
@@ -19,6 +18,9 @@ public class datosPer extends JFrame implements ActionListener
     private JButton buttonMenu;
     private JTextField apellidoField;
     private JLabel labelApellido;
+    private JTextField textFieldWhatapp;
+    private JLabel labelWhats;
+    private JButton buttonMostrar;
     private JList list1;
     private GestionErrores error;
 

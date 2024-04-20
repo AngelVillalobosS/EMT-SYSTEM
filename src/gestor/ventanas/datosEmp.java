@@ -14,13 +14,10 @@ public class datosEmp extends JFrame implements ActionListener
     private JPanel JDatosEmp;
     private JLabel labelTitulo;
     private JButton botonMenu;
-    private JLabel labelNombreEmpresa;
     private JTextField nombreEmField;
     private JTextField rfcField;
-    private JLabel labelRFC;
     private JButton botonRegistrar;
     private JButton buttonMostrar;
-    private JLabel LabelTelefono;
     private JTextField textFieldTelefonoE;
     private JLabel LabelId;
     private JTextField textFieldID;

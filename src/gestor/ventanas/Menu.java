@@ -1,6 +1,6 @@
 package gestor.ventanas;
 
-import gestor.ventanas.empleados.BusquedaEmpleados;
+import gestor.ventanas.empleados.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -70,7 +70,7 @@ public class Menu extends JFrame implements ActionListener
         datosPer datosPer = new datosPer();
 
         venDatosPer.setContentPane(datosPer.getJDatosPer());
-        venDatosPer.setSize(900,500);
+        venDatosPer.setSize(750,500);
 
         venDatosPer.setLocationRelativeTo(null);
         venDatosPer.setVisible(true);
@@ -82,9 +82,12 @@ public class Menu extends JFrame implements ActionListener
         int x = (tamannio.width / 2) - 200;
         int y = (tamannio.height / 2) - 150;
 
-//        AnniadirEmpleados empleados = new datosEmp();
+        BusquedaEmpleados busquedaEmpleados = new BusquedaEmpleados();
 
-//        ventEmpleados.setContentPane(datosEmp.getJDatosEmpr());
+        ventEmpleados.setContentPane(busquedaEmpleados.getJPanelEmp());
+        ventEmpleados.setSize(800,400);
+        ventEmpleados.setLocationRelativeTo(null);
+        ventEmpleados.setVisible(true);
     }
 
     private void mostarDatosEmpresariales()
@@ -97,7 +100,7 @@ public class Menu extends JFrame implements ActionListener
         datosEmp datosEmp = new datosEmp();
 
         venDatosEmp.setContentPane(datosEmp.getJDatosEmpr());
-        venDatosEmp.setSize(1200,800);
+        venDatosEmp.setSize(750,500);
         venDatosEmp.setLocationRelativeTo(null);
         venDatosEmp.setVisible(true);
 

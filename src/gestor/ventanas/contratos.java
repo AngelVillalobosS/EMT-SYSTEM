@@ -1,8 +1,8 @@
 package gestor.ventanas;
 
 import gestor.empresarial.contrato.Contrato;
-import gestor.empresarial.datos.DatosEmpresariales;
 import gestor.empresarial.empleados.Empleados;
+import gestor.empresarial.empresa.Empresa;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -14,16 +14,18 @@ public class contratos extends JFrame implements ActionListener
     private JPanel JContratos;
     private JLabel LabelContratos;
     private JButton buttonMenu;
-    private JTextField textFieldID;
-    private JLabel labelNoContrato;
-    private JTextField textFieldNumero;
-    private JLabel labelanno;
-    private JTextField textFieldAnno;
+    private JTextField textFieldNombreEm;
+    private JLabel labelTelfonoEm;
+    private JTextField textFieldTelfono;
+    private JLabel labelRFC;
+    private JTextField textFieldRFC;
     private JLabel labelCargo;
     private JComboBox comboBox1;
     private JButton buttonRegistar;
+    private JRadioButton radioButton1;
     private Contrato contrato;
     private Empleados empleado;
+    private Empresa empresa;
 
 
     public JPanel getJContratos()
@@ -51,18 +53,17 @@ public class contratos extends JFrame implements ActionListener
 
         if (e.getSource() == buttonRegistar)
         {
+            String nombreEm = textFieldNombreEm.getText();
+            String telefono = textFieldTelfono.getText();
+            String rfc = textFieldRFC.getText();
             Cargos cargo = (Cargos) comboBox1.getSelectedItem();
             String opcionCargo = cargo.toString();
             //empleado.setCargo();
-            //JOptionPane.showMessageDialog(this,opcionCargo);
 
-            int numeroContrato = textFieldNumero.getColumns();
-            contrato.setNoContrato(numeroContrato);
+            empresa = new Empresa(nombreEm, rfc);
+            empresa.setTelefonoE(telefono);
 
-            int anno = textFieldAnno.getColumns();
-            contrato.setNoContrato(anno);
 
-            String id = textFieldID.getText();
 
 
         }
