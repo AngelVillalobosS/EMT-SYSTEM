@@ -20,22 +20,21 @@ public final class  Empleados implements iEmpleados{
         datos = new DatosEmpresariales[100];
         this.i = 0;
         this.j = 0;
-
     }
 
     public int addAspirante(String nombre, String apellidos, String correo, String whatsapp){
 
         String sql = "INSERT INTO Aspirante (nombre, apellidos, correo, whatsapp) VALUES (?, ?, ?, ?)";
-        try (Connection conn = ConectorMySQL.getInstance();
+        try (Connection conn = ConectorMySQL.getInstance().getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-            // Set parameters for the PreparedStatement
+            // Da los parametros para el PreparedStatement
             pstmt.setString(1, nombre);
             pstmt.setString(2, apellidos);
             pstmt.setString(3, correo);
             pstmt.setString(4, whatsapp);
 
-            // Execute the insert statement
+            // Ejecuta la funcion del insert
             int affectedRows = pstmt.executeUpdate();
             return affectedRows;
         } catch (SQLException e) {
@@ -44,18 +43,9 @@ public final class  Empleados implements iEmpleados{
         return 0;
     }
 
-    public void addContato(String id, int anno)
+    public void addContrato(String id, int anno)
     {
-        if (i < 100) {
-            int i=findEmpleado(id);
-            if (i>-1) {
-                contratos[j] = new Contrato(i, 100+j, anno);
-                this.j++;
-            }
-        }
-        else {
-            System.out.println("Ya no hay vacantes");
-        }
+
     }
 
     private int findEmpleado(int id){

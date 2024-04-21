@@ -16,7 +16,7 @@ public class BusquedaEmpleados extends JFrame implements ActionListener
 
     }
 
-    public JPanel getJPanelEmp()
+    public JPanel getJPanelEmpr()
     {
         return JPanelEmp;
     }

@@ -53,6 +53,4 @@ public class Aspirante implements Serializable {
     public void setWhatsapp(String whatsapp) {
         this.whatsapp = whatsapp;
     }
-
-
 }

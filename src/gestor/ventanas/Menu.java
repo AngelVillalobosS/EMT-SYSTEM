@@ -6,7 +6,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import gestor.ventanas.empleados.AnniadirEmpleados;
 
 public class Menu extends JFrame implements ActionListener
 {
@@ -84,7 +83,7 @@ public class Menu extends JFrame implements ActionListener
 
         BusquedaEmpleados busquedaEmpleados = new BusquedaEmpleados();
 
-        ventEmpleados.setContentPane(busquedaEmpleados.getJPanelEmp());
+        ventEmpleados.setContentPane(busquedaEmpleados.getJPanelEmpr());
         ventEmpleados.setSize(800,400);
         ventEmpleados.setLocationRelativeTo(null);
         ventEmpleados.setVisible(true);
@@ -97,7 +96,7 @@ public class Menu extends JFrame implements ActionListener
         int x = (tamannio.width / 2) -200;
         int y = (tamannio.height / 2) -150;
 
-        datosEmp datosEmp = new datosEmp();
+        datosEmpr datosEmp = new datosEmpr();
 
         venDatosEmp.setContentPane(datosEmp.getJDatosEmpr());
         venDatosEmp.setSize(750,500);

@@ -3,9 +3,12 @@ package gestor.ventanas;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.*;
 
 import gestor.empresarial.empleados.Empleados;
 import gestor.errores.GestionErrores;
+import mysql.ConectorMySQL;
+
 public class datosPer extends JFrame implements ActionListener
 {
     private JPanel JDatosPer;
@@ -38,10 +41,10 @@ public class datosPer extends JFrame implements ActionListener
     {
         System.out.println("DatosPer");
         buttonRegistrar.addActionListener(e -> actionPerformed(e));
-        buttonMenu.addActionListener(this);
+        buttonMenu.addActionListener(e -> actionPerformed(e));
+        buttonMostrar.addActionListener(e -> actionPerformed(e));
         empleados = new Empleados();
     }
-
 
     @Override
     public void actionPerformed(ActionEvent e)
@@ -68,12 +71,42 @@ public class datosPer extends JFrame implements ActionListener
                 String whatsapp = whatsappField.getText();
 
                 int resultado = empleados.addAspirante(nombre, apellido, correo, whatsapp);
+                System.out.println(resultado);
 
-                JOptionPane.showMessageDialog(null, "Se ha registrado con éxito " + resultado);
+                if (resultado == 1) {
+                    JOptionPane.showMessageDialog(null, "Se ha registrado con éxito " + resultado);
+                    nombreField.setText("");
+                    apellidoField.setText("");
+                    emailField.setText("");
+                    whatsappField.setText("");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Error al registrar, Intente de nuevo");
+                }
+
             } else{
                 //En dado caso que haya una casilla vacia se manda un mensaje de error
                 System.out.println("Error al guardar");
                 JOptionPane.showMessageDialog(null, error.getError(9));
+            }
+        }
+        if (e.getSource().equals(buttonMostrar)){
+            try {
+                Connection conn = ConectorMySQL.getInstance().getConnection();
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT * FROM Aspirante");
+                String output = "ID\tNombre\t\tApellidos\t\tCorreo\t\tWhatsapp\n";
+                while (rs.next()) {
+                    int id = rs.getInt("id");
+                    String name = rs.getString("nombre");
+                    String lastname = rs.getString("apellidos");
+                    String email = rs.getString("correo");
+                    String wa = rs.getString("whatsapp");
+
+                    output = output + id + "\t" + name + "\t\t" + lastname + "\t\t" + email + "\t\t" + wa + "\n";
+                }
+                JOptionPane.showMessageDialog(null, output);
+            } catch (SQLException error) {
+                System.out.println("SQL Error: " + error.getMessage());
             }
         }
     }

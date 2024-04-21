@@ -21,7 +21,7 @@ public class DatabaseTest {
 
                 System.out.println(id + "\t" + name + "\t\t" + lastname + "\t\t" + email + "\t\t" + wa);
             }
-            System.out.println("Connected to the database successfully!");
+            System.out.println("\nConexion a la Base de datos Exitosa!");
         } catch (SQLException e) {
             System.out.println("SQL Error: " + e.getMessage());
         }

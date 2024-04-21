@@ -8,7 +8,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class datosEmp extends JFrame implements ActionListener
+public class datosEmpr extends JFrame implements ActionListener
 {
 
     private JPanel JDatosEmp;
@@ -41,7 +41,7 @@ public class datosEmp extends JFrame implements ActionListener
         return JDatosEmp;
     }
 
-    public datosEmp()
+    public datosEmpr()
     {
         menu = new JMenu();
         datosEmpleado = new DatosEmpresariales(12,"a", "23131", "231");
@@ -87,8 +87,6 @@ public class datosEmp extends JFrame implements ActionListener
         {
             System.out.println("Has clickeado Mostrar");
             String id = textFieldID.getText();
-
-
         }
     }
 }

@@ -1,0 +1,15 @@
+version: '3.8'  # Use Docker Compose file format version 3.8
+
+services:
+  mysql:
+    image: mysql:latest  # You can use mysql:latest if you prefer the latest version
+    ports:
+      - "3306:3306"  # Map TCP port 3306 in the container to port 3306 on the Docker host
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DATABASE_ROOT_PASSWORD}  # Mandatory: This is the password for the root user
+      MYSQL_DATABASE: ${DATABASE_NAME}  # Optional: Specify the name of a database to be created on image startup
+      MYSQL_USER: ${DATABASE_USER}  # Optional: Create a new user and grant all privileges to the specified database
+      MYSQL_PASSWORD: ${DATABASE_PASSWORD}  # Optional: Password for the new user
+    volumes:
+      - ./data/mysql:/var/lib/mysql  # Persist data even when the container is destroyed
+      - ./data/mysql.d:/docker-entrypoint-initdb.d
