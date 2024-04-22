@@ -3,9 +3,9 @@ package gestor.ventanas;
 public enum Cargos
 
 {
-    confianza("Empleado de Confianza"),
-    sindicalizado("Empleado sindicalizado"),
-    temporal("Empleado temporal");
+    CONFIANZA("De confianza")  ,
+    SINDICALIZADO("Sindicalizado"),
+    TEMPORAL("Contrato Temporal");
 
 
     private final String nombre;

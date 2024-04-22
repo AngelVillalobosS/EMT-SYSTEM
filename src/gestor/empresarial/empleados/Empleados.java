@@ -63,8 +63,20 @@ public final class  Empleados implements iEmpleados {
         return 0;
     }
 
-    public void addContrato(String id, int anno) {
+    public int addContrato(String idEmpleado, String extension, String tipoContrato) {
+        String sql = "INSERT INTO contrato (id_empleado, telefono_empresa, extension, tipo_contrato, nombre_empresa, rfc_empresa) VALUES (?, 2201020304, ?, ?, 'Itera_SA', 'EMT2104')";
+        try (Connection conn = ConectorMySQL.getInstance().getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, idEmpleado);
+            pstmt.setString(2, extension);
+            pstmt.setString(3, tipoContrato);
 
+            int affectedRows = pstmt.executeUpdate();
+            return affectedRows;
+        } catch (SQLException eEmpleado) {
+            System.out.println("SQL Error: " + eEmpleado.getMessage());
+        }
+        return 0;
     }
 
     public int findEmpleado(int id) {
