@@ -33,7 +33,6 @@ public class Login extends JFrame implements ActionListener
                 JOptionPane.showMessageDialog(null, "BIENVENIDO");
                 mostrarMenu();
 
-
             } else {
                 JOptionPane.showMessageDialog(null, "USUARIO O CONTRASEÑA INCORRECTOS");
             }

@@ -18,8 +18,6 @@ public final class  Empleados implements iEmpleados {
     public Empleados() {
         contratos = new Contrato[100];
         datos = new DatosEmpresariales[100];
-        this.i = 0;
-        this.j = 0;
     }
 
     public int addAspirante(String nombre, String apellidos, String correo, String whatsapp) {

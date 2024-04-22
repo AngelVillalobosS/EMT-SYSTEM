@@ -41,7 +41,7 @@ Navega al directorio que contiene el archivo 'docker-compose.yml' y en terminal 
 ```bash
 docker-compose up -d
 ```
-Este comando iniciará todos los servicios requeridos, incluyendo la base de datos MySQL y los otros servicios deifnidos en 'docker-compose.yml'
+Este comando iniciará todos los servicios requeridos, incluyendo la base de datos MySQL y los otros servicios definidos en 'docker-compose.yml'
 
 ## Ejecutar el proyecto
 El proyecto se puede ejecutar desde IntelliJ Idea, con el botón "run"
@@ -52,21 +52,21 @@ El proyecto funciona con Interfaces graficas, con las cuales puedes interactuar,
 Siendo asi que el proyecto cuenta con las siguientes ventanas (Se te dará una pequeña descripción de lo que puede realizar en cada ventana)
 - Logueo
 - Menu
-    - Aqui encontraras diferentes botones con los cuales serás dirigido a las ventanas las cuales comparte el nombre del botón.
+  - Aqui encontraras diferentes botones con los cuales serás dirigido a las ventanas las cuales comparte el nombre del botón.
 - Aspirantes
-    - En aspirantes podrás registrar aspirantes, asi como consultar sus datos.
+  - En aspirantes podrás registrar aspirantes, asi como consultar sus datos.
 - Datos Empresariales
-    - En Datos Empresariales podrás registar los empleados que desees.
+  - En Datos Empresariales podrás registar los empleados que desees.
 - Empleados
-    - En empleados podrás consultar los datos de los empleado registrados previamente.
+  - En empleados podrás consultar los datos de los empleado registrados previamente.
 - Contratos
-    - En contratos podrás usar el ID de un empleado para asignarle un contrato en especifico, asi como ver los datos de los contratos realizados.
+  - En contratos podrás usar el ID de un empleado para asignarle un contrato en especifico, asi como ver los datos de los contratos realizados.
 
 ## Contribuciones
 
 EMT-SYSTEM fue desarrollado como un proyecto final para la materia de Fundamentos de POO, siendo asi que este proyecto esta restringuido a pocas personas para contribución.
 
-## License
+## Licencia
 Este proyecto no cuenta con una licencia como tal, solo es con fines escolares.
 
 ## Contacto
@@ -74,3 +74,5 @@ Este proyecto no cuenta con una licencia como tal, solo es con fines escolares.
 Si tienes cualquier duda, por favor contactame:
 
 - GitHub @AngelVillalobosS
+- Github @MireyaCastro70
+- GitHub @GeraSau03
