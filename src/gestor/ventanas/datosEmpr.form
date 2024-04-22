@@ -16,7 +16,7 @@
         </constraints>
         <properties>
           <foreground color="-394241"/>
-          <text value="Extencion"/>
+          <text value="Puesto"/>
         </properties>
       </component>
       <component id="8b41d" class="javax.swing.JTextField" binding="extensionField">
@@ -35,7 +35,7 @@
         </constraints>
         <properties>
           <foreground color="-394241"/>
-          <text value="Puesto"/>
+          <text value="Tipo puesto"/>
         </properties>
       </component>
       <component id="e25f3" class="javax.swing.JTextField" binding="puestoField">

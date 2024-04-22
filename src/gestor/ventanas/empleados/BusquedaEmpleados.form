@@ -41,6 +41,7 @@
           </grid>
         </constraints>
         <properties>
+          <autoCreateRowSorter value="false"/>
           <fillsViewportHeight value="false"/>
           <selectionForeground color="-4138497"/>
         </properties>

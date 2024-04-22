@@ -38,7 +38,6 @@ public class contratos extends JFrame implements ActionListener
         buttonMenu.addActionListener(this);
         buttonRegistar.addActionListener(this);
         comboBox1.setModel(new DefaultComboBoxModel<>(Cargos.values()));
-        //contrato = new Contrato(0);
         empleado = new Empleados();
 
     }
