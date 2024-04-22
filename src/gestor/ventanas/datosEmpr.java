@@ -3,10 +3,12 @@ package gestor.ventanas;
 import gestor.empresarial.datos.DatosEmpresariales;
 import gestor.empresarial.empleados.Empleados;
 import gestor.empresarial.empresa.Empresa;
+import gestor.errores.GestionErrores;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import mysql.ConectorMySQL;
 
 public class datosEmpr extends JFrame implements ActionListener
 {
@@ -19,22 +21,26 @@ public class datosEmpr extends JFrame implements ActionListener
     private JButton botonRegistrar;
     private JButton buttonMostrar;
     private JTextField textFieldTelefonoE;
-    private JLabel LabelId;
     private JTextField textFieldID;
     private JLabel LabelAdscripcion;
-    private JTextField textFieldAdscripcion;
+    private JTextField adscripcionField;
     private JLabel LabelLada;
-    private JTextField textFieldLada;
+    private JTextField extensionField;
     private JLabel labelTelEmp;
-    private JTextField textFieldTelEmpl;
+    private JTextField whatsappField;
     private JLabel labelPuesto;
-    private JTextField textFielPuesto;
+    private JTextField puestoField;
+    private JTextField correoField;
+    private JTextField apellidosField;
+    private JTextField nombreField;
     private DatosEmpresariales datosE;
     private Empleados empleado;
     private Empresa empresa;
 
     private JMenu menu;
     private DatosEmpresariales datosEmpleado;
+    private GestionErrores error;
+    private final Empleados empleados;
 
     public JPanel getJDatosEmpr()
     {
@@ -47,8 +53,7 @@ public class datosEmpr extends JFrame implements ActionListener
         datosEmpleado = new DatosEmpresariales(12,"a", "23131", "231");
         botonMenu.addActionListener(this);
         botonRegistrar.addActionListener(this);
-        //datosE = new DatosEmpresariales(2,"x" , "x", "x");
-        empleado = new Empleados();
+        empleados = new Empleados();
         empresa = new Empresa("x", "x");
     }
 
@@ -62,31 +67,39 @@ public class datosEmpr extends JFrame implements ActionListener
             this.dispose();
         }
 
-        if(e.getSource() == botonRegistrar)
+        if(e.getSource().equals(botonRegistrar))
         {
-            String id = textFieldID.getText();
-            String Ads = textFieldAdscripcion.getText();
-            String lada = textFieldLada.getText();
-            String tel = textFieldTelEmpl.getText();
-            String puesto = textFielPuesto.getText();
+            if (!nombreField.getText().isEmpty() && !apellidosField.getText().isEmpty() && !correoField.getText().isEmpty() && !whatsappField.getText().isEmpty() && !adscripcionField.getText().isEmpty() && !extensionField.getText().isEmpty() && !puestoField.getText().isEmpty()){
+                System.out.println("Se entro a registrar");
+                String nombre = nombreField.getText();
+                String apellidos = apellidosField.getText();
+                String correo = correoField.getText();
+                String whatsapp = whatsappField.getText();
+                String adscripcion = adscripcionField.getText();
+                String extension = extensionField.getText();
+                String puesto = puestoField.getText();
 
-            String nomEmp = nombreEmField.getText();
-            String telEmp = textFieldTelefonoE.getText();
-            String rfc = rfcField.getText();
+                int resultado = empleados.addEmpleado(nombre, apellidos, correo, whatsapp, adscripcion, extension, puesto);
+                System.out.println(resultado);
 
-            empleado.setAdscripcion(id,Ads);
-            empleado.setTelefonoExtension(id, lada);
-            empleado.setWhatsapp(Integer.parseInt(id), tel);
-            empleado.setPuesto(id, puesto);
+                if (resultado == 1) {
+                    JOptionPane.showMessageDialog(null, "Se ha registrado con éxito " + resultado);
+                    nombreField.setText("");
+                    apellidosField.setText("");
+                    correoField.setText("");
+                    whatsappField.setText("");
+                    adscripcionField.setText("");
+                    extensionField.setText("");
+                    puestoField.setText("");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Error al registrar, Intente de nuevo");
+                }
 
-            new Empresa(nomEmp,rfc);
-            empresa.setTelefonoE(telEmp);
-        }
-
-        if(e.getSource() == buttonMostrar)
-        {
-            System.out.println("Has clickeado Mostrar");
-            String id = textFieldID.getText();
+            } else{
+                //En dado caso que haya una casilla vacia se manda un mensaje de error
+                System.out.println("Error al guardar");
+                JOptionPane.showMessageDialog(null, error.getError(9));
+            }
         }
     }
 }

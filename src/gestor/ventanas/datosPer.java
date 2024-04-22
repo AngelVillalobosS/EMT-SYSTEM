@@ -94,7 +94,7 @@ public class datosPer extends JFrame implements ActionListener
                 Connection conn = ConectorMySQL.getInstance().getConnection();
                 Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery("SELECT * FROM Aspirante");
-                String output = "ID\tNombre\t\tApellidos\t\tCorreo\t\tWhatsapp\n";
+                String output = "ID \tNombre \t\tApellidos \t\tCorreo \t\tWhatsapp \n";
                 while (rs.next()) {
                     int id = rs.getInt("id");
                     String name = rs.getString("nombre");
@@ -102,7 +102,7 @@ public class datosPer extends JFrame implements ActionListener
                     String email = rs.getString("correo");
                     String wa = rs.getString("whatsapp");
 
-                    output = output + id + "\t" + name + "\t\t" + lastname + "\t\t" + email + "\t\t" + wa + "\n";
+                    output = output + id + " | " + name + " " + lastname + " " + email + " " + wa + "\n";
                 }
                 JOptionPane.showMessageDialog(null, output);
             } catch (SQLException error) {

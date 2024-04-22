@@ -37,7 +37,7 @@ mvn clean package;
 ```
 ## Correr el Proyecto
 ### Inicializar el Contenedor del Docker
-Navega al directorio que contiene el archivo 'docker-compose.yml' y corre:
+Navega al directorio que contiene el archivo 'docker-compose.yml' y en terminal corre el siguiente comando:
 ```bash
 docker-compose up -d
 ```

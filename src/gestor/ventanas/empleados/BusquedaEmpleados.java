@@ -9,7 +9,8 @@ public class BusquedaEmpleados extends JFrame implements ActionListener
     private JButton botonMenu;
     private JButton botonBuscar;
     private JPanel JPanelEmp;
-    private JTextField textField1;
+    private JTextField idField;
+    private JTable mostrarDatosEmpleados;
 
     public BusquedaEmpleados()
     {

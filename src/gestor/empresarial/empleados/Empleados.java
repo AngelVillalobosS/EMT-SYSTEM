@@ -24,7 +24,7 @@ public final class  Empleados implements iEmpleados{
 
     public int addAspirante(String nombre, String apellidos, String correo, String whatsapp){
 
-        String sql = "INSERT INTO Aspirante (nombre, apellidos, correo, whatsapp) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO aspirante (nombre, apellidos, correo, whatsapp) VALUES (?, ?, ?, ?)";
         try (Connection conn = ConectorMySQL.getInstance().getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
@@ -39,6 +39,25 @@ public final class  Empleados implements iEmpleados{
             return affectedRows;
         } catch (SQLException e) {
             System.out.println("SQL Error: " + e.getMessage());
+        }
+        return 0;
+    }
+    public int addEmpleado(String nombre, String apellidos, String correo, String whatsapp, String adscripcion, String puesto, String tipoPuesto) {
+        String sql = "INSERT INTO empleado (nombre, apellidos, correo, whatsapp, adscripcion, puesto, tipo_puesto) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        try (Connection conn = ConectorMySQL.getInstance().getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, nombre);
+            pstmt.setString(2, apellidos);
+            pstmt.setString(3, correo);
+            pstmt.setString(4, whatsapp);
+            pstmt.setString(5, adscripcion);
+            pstmt.setString(6, puesto);
+            pstmt.setString(7, tipoPuesto);
+
+            int affectedRows = pstmt.executeUpdate();
+            return affectedRows;
+        } catch (SQLException eEmpleado){
+            System.out.println("SQL Error: " +eEmpleado.getMessage());
         }
         return 0;
     }
